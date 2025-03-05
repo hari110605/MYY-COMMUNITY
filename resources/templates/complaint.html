@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Registration</title>
+    <style>
+        /* Global Styling */
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5; /* Light background for contrast */
+        }
+
+        header {
+            background-color: #0D1321; /* Dark Blue */
+            color: #FFFFFF;
+            padding: 25px;
+            text-align: center;
+        }
+
+        main {
+            flex-grow: 1; /* Makes the main section grow to fill available space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        form {
+            background-color: #FFFFFF; /* White background for the form */
+            border-radius: 8px; /* Rounded corners for the form */
+            padding: 40px; /* Padding inside the form */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            width: 100%; /* Full width of the container */
+            max-width: 600px; /* Limit maximum width for larger screens */
+        }
+
+        label {
+            margin-bottom: 5px; /* Space below labels */
+            font-weight: bold; /* Bold labels for emphasis */
+            display: block; /* Labels on their own line */
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%; /* Full width inputs */
+            padding: 10px; /* Padding inside inputs */
+            margin-bottom: 20px; /* Space below inputs */
+            border: 1px solid #ccc; /* Light border */
+            border-radius: 4px; /* Rounded corners for inputs */
+        }
+
+        button {
+            background-color: #0D1321; /* Dark Blue */
+            color: #FFFFFF; /* White text */
+            padding: 15px; /* Padding inside the button */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners for the button */
+            cursor: pointer; /* Pointer on hover */
+            font-size: 1.1rem; /* Larger font size */
+            width: 100%; /* Full width button */
+        }
+
+        button:hover {
+            background-color: #C2E812; /* Bright Green on hover */
+        }
+
+        footer {
+            background-color: #0D1321; /* Dark Blue */
+            color: #FFFFFF;
+            text-align: center;
+            padding: 15px; /* Footer padding */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Complaint Registration</h1>
+    </header>
+
+    <main>
+        <form action="/submit-complaint" method="post">
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="">Select Category</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="carpentry">Carpentry</option>
+                <option value="electrical">Electrical</option>
+                <option value="ac-repair">AC Repair</option>
+                <option value="others">Others</option>
+            </select>
+
+            <label for="subcategory">Subcategory:</label>
+            <select id="subcategory" name="subcategory" required>
+                <option value="">Select Subcategory</option>
+                <option value="pipe-leakage">Pipe Leakage</option>
+                <option value="tap-repair">Tap Repair</option>
+                <option value="door-hinge-repair">Door Hinge Repair</option>
+                <option value="ac-installation">AC Installation</option>
+                <option value="other-issues">Other Issues</option>
+            </select>
+
+            <label for="doorNo">Door No:</label>
+            <input type="text" id="doorNo" name="doorNo" placeholder="Enter your door number" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter complaint subject" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" placeholder="Describe the issue" rows="5" required></textarea>
+
+            <label for="phoneNo">Mobile Phone No:</label>
+            <input type="tel" id="phoneNo" name="phoneNo" placeholder="Enter your mobile number" required>
+
+            <button type="submit">Submit Complaint</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Community</p>
+    </footer>
+</body>
+</html>

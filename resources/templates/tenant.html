@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenant Dashboard</title>
+    <style>
+        /* Global Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            color: #0D1321;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #0D1321;
+            color: #FFFFFF;
+            padding: 25px 20px; /* Increased padding for height */
+        }
+
+        .header-content {
+            display: block; /* Ensures elements are in block format */
+            text-align: center; /* Center the text within the header */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Main Section Styling */
+        main {
+            display: flex; /* Use flexbox for layout */
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        /* Image Box Styling */
+        .image-box {
+            width: 50%; /* Set to cover half of the page */
+            height: 100%; /* Full height */
+            overflow: hidden;
+        }
+
+        .image-box img {
+            width: 100%; /* Full width of the box */
+            height: 100%; /* Full height of the box */
+            object-fit: cover; /* Ensure the image covers the box without distortion */
+        }
+
+        /* Action Container Styling */
+        .action-container {
+            border: 2px solid #C2E812; /* Border color */
+            padding: 20px; /* Padding inside the box */
+            border-radius: 0; /* Removed border radius for square corners */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* Increased gap between buttons */
+            background-color: #f5f5f5;
+            width: 50%; /* Set to cover half of the page */
+            height: 100%; /* Set height to match image height */
+            margin-left: 20px; /* Space between image and box */
+        }
+
+        /* Button Styling */
+        .logout-button,
+        .action-container a {
+            text-decoration: none;
+            background-color: #0D1321;
+            color: #FFFFFF;
+            padding: 20px 0; /* Adjusted padding for larger height */
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1.5rem; /* Increased font size */
+            transition: background-color 0.3s;
+            width: 80%; /* Width to occupy most of the container */
+            text-align: center;
+        }
+
+        .logout-button:hover,
+        .action-container a:hover {
+            background-color: #C2E812; /* Changed hover color to Bright Green */
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #0D1321;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 25px; /* Increased padding for height */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Tenant Home -->
+    <header>
+        <div class="header-content">
+            <h1>Tenant Home</h1>
+        </div>
+    </header>
+
+    <main>
+        <!-- Left Image Box -->
+        <aside class="image-box">
+            <img src="https://img.freepik.com/premium-photo/modern-apartment-building-illustration_604472-178406.jpg" alt="Tenant Image" />
+        </aside>
+        
+        <!-- Right Action Container with Bordered Box -->
+        <div class="action-container">
+            <a href="/logout" class="logout-button">Logout</a>
+            <a href="/tenant/complaint">Report Issue</a>
+            <a href="/viewAnnouncements">View Announcements</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Community. All rights reserved.</p>
+    </footer>
+</body>
+</html>

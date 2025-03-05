@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - My Community</title>
+    <style>
+        /* Global Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5; /* Light background */
+            color: #0D1321; /* Dark text color */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure full height */
+        }
+
+        header {
+            background-color: #0D1321; /* Dark Blue Header */
+            color: #FFFFFF; /* White Text */
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            flex-grow: 1; /* Allow main to expand */
+            padding: 20px;
+            display: flex;
+            justify-content: center; /* Center the form */
+            align-items: center; /* Center vertically */
+        }
+
+        form {
+            background-color: #ffffff; /* White background for form */
+            border: 2px solid #C2E812; /* Yellow border */
+            border-radius: 8px; /* Rounded corners */
+            padding: 30px; /* Space inside the form */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            width: 100%;
+            max-width: 400px; /* Max width for form */
+        }
+
+        label {
+            margin-top: 10px; /* Space above each label */
+            display: block; /* Make labels block level */
+            font-weight: bold; /* Bold labels */
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%; /* Full width */
+            padding: 10px; /* Padding inside input fields */
+            margin-top: 5px; /* Space above inputs */
+            border: 1px solid #C2E812; /* Yellow border */
+            border-radius: 4px; /* Slightly rounded corners */
+            font-size: 1rem; /* Font size for inputs */
+        }
+
+        button {
+            background-color: #0D1321; /* Dark Blue Button */
+            color: #FFFFFF; /* White Text */
+            padding: 15px; /* Padding for button */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners */
+            font-size: 1.1rem; /* Slightly larger font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            margin-top: 15px; /* Space above button */
+            width: 100%; /* Full width button */
+            transition: background-color 0.3s; /* Smooth color transition */
+        }
+
+        button:hover {
+            background-color: #C2E812; /* Yellow background on hover */
+        }
+
+        p {
+            margin-top: 15px; /* Space above paragraph */
+            text-align: center; /* Center the paragraph */
+        }
+
+        footer {
+            background-color: #0D1321; /* Dark Blue Footer */
+            color: #FFFFFF; /* White Text */
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sign Up for My Community</h1>
+    </header>
+    <main>
+        <form action="/signup" method="post">
+            <label for="doorNo">Door Number:</label>
+            <input type="text" id="doorNo" name="doorNo" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="role">Role:</label>
+            <select id="role" name="role" required>
+                <option value="tenant">Tenant</option>
+                <option value="admin">Admin</option>
+            </select>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="/login">Login here</a></p>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Community. All rights reserved.</p>
+    </footer>
+</body>
+</html>

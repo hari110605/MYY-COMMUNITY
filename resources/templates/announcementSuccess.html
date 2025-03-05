@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement Posted - My Community</title>
+    <style>
+        /* Global Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5; /* Light background */
+            color: #0D1321; /* Dark text color */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure full height */
+            text-align: center; /* Center text in the main content */
+        }
+
+        header {
+            background-color: #0D1321; /* Dark Blue Header */
+            color: #FFFFFF; /* White Text */
+            padding: 20px;
+        }
+
+        main {
+            flex-grow: 1; /* Allow main to expand */
+            padding: 20px;
+        }
+
+        button {
+            background-color: #C2E812; /* Yellow background for buttons */
+            color: #0D1321; /* Dark text for buttons */
+            border: none;
+            border-radius: 5px; /* Rounded corners for buttons */
+            padding: 10px 20px; /* Padding for buttons */
+            margin: 5px; /* Space between buttons */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 16px; /* Increase font size */
+        }
+
+        button:hover {
+            background-color: #0D1321; /* Dark Blue on hover */
+            color: #C2E812; /* Yellow text on hover */
+        }
+
+        footer {
+            background-color: #0D1321; /* Dark Blue Footer */
+            color: #FFFFFF; /* White Text */
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Announcement Posted Successfully!</h1>
+    </header>
+
+    <main>
+        <p>Your announcement has been posted successfully.</p>
+        <p>Thank you for keeping the community informed!</p>
+        <button onclick="location.href='/viewAnnouncements'">View Announcements</button>
+        <button onclick="location.href='/admin'">Back to Admin Dashboard</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Community. All rights reserved.</p>
+    </footer>
+</body>
+</html>
